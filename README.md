@@ -6,9 +6,9 @@ to start server:
 
 
 each chore card: 
-  <div class="chore-card">
+  ```<div class="chore-card">
     <button class="delete-button">x</button>
     <h3>title</title>
     <p>Duration</p>
     <input>
-</div>
+</div>```
