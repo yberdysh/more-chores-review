@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <p>${chore.duration}</p>
     <input value=${chore.priority} data-id=${chore.id}>`
     // can also use query selector to find the button to add event listener to
+
+    // event delegation here:
     choreDiv.addEventListener("click", (e) => {
       if (e.target.className === "delete-button"){
         deleteAChore(e.target.dataset.id)
@@ -36,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     choresDiv.append(choreDiv)
 
+    // not using event delegation
     let input = choreDiv.querySelector("input")
     input.addEventListener("blur", (e) => {
       let choreID = e.target.dataset.id
